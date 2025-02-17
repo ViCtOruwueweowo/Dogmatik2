@@ -3,117 +3,21 @@
    padding: 0;
    margin: 0%;
    box-sizing: border-box;
-   /* font-weight: 900; */
 }
 
 :root {
    --text--size: 18px;
-   /* #region COLORS */
-
    --color--primary: #99D9D9;
    --color--secondary: #68A2B9;
-   --color--light: #F2F0E9;
-   --color--dark: #231F20;
    --color--bluegreen: #5BB0BC;
-   --color--brown: #736C52;
-   --color--bg--dark: #001628;
-   --color--green: #219F94;
-   --color--red: #EB5353;
-
-   --color--dark--transparent: #001628ea;
-   --color--light: #F2F0E9;
    --color--bg--blue: #59A9B5;
-   --color--bg--brown: #6E6C4F;
-
-
    --color--scroll: #68A2B9;
-   --color--bg--scroll: #343A40;
-   /* --color--bg--scroll: #D6D8D9; */
-   /* #endregion COLORS */
-
-   /* #region SCREENS */
-   --screen--max--size--x-small: 576px; /* <576px */
-   --screen--max--size--small: 767px; /* >=576px */
-   --screen--max--size--medium: 991px; /* >=992px */
-   --screen--max--size--large: 1199px; /* >=1200px */
-   --screen--max--size--x-large: 1399px; /* >=1400px */
-   /* --screen--max--size--xx-large: 1400px; /* >=1400px */
-   /* #endregion SCREENS */
-
    font-family: 'Roboto', sans-serif;
-   /* font-family: 'Quicksand', sans-serif; */
-   /* font-family: 'Bebas Neue', cursive; */
-
    font-size: var(--text--size);
    line-height: 1.5rem;
    color: var(--color--dark);
-
-   /* --porcent--change--color: 48%;
-   --porcent2--change--color: 40%; */
-   /* --porcent--change--color: 48%;
-   --porcent2--change--color: 40%; */
-   /* --porcent--change--color: 50%; */
    --porcent--change--color: 5%;
 
-}
-
-
-/* --------------------------------SCROLLBAR------------------------------------------ */
-/* Works on Firefox */
-* {
-   scrollbar-width: thin;
-   scrollbar-color: var(--color--scroll) var(--color--bg--scroll);
- }
-
- /* Works on Chrome, Edge, and Safari */
- *::-webkit-scrollbar {
-   width: 10px;
- }
-
- *::-webkit-scrollbar-track {
-   background: var(--color--bg--scroll);
- }
-
- *::-webkit-scrollbar-thumb {
-   background-color: var(--color--scroll);
-   border-radius: 15px;
-   /* border: solid var(--color--scroll); */
- }
-/* --------------------------------SCROLLBAR------------------------------------------ */
-
-
-
-/* Dark-mode */
-/* @media (prefers-color-scheme: dark) {
-   body {
-       background-color: black;
-       color: white;
-   }
-} */
-/* Light-mode */
-/* @media (prefers-color-scheme: light) {
-   body {
-       background-color: white;
-       color: black;
-   }
-} */
-
-
-
-
-
-.scroll-y-none {
-   overflow-y: hidden;
-}
-
-
-a {
-   text-decoration: none;
-   color: inherit;
-   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-a:hover {
-   opacity: .5;
 }
 
 
@@ -156,23 +60,11 @@ a:hover {
 @media screen and (max-width: 620px) {
    :root { --porcent--change--color: 98%;}
 }
-/* @media screen and (max-width: 1024px) {
-   :root { --porcent--change--color: 85%;}
-} */
-/* @media screen and (max-width: 768px) {
-   :root { --porcent--change--color: 55%;}
-} */
-/* @media screen and (max-width: 425px) {
-   :root { --porcent--change--color: 64%;}
-}
-@media screen and (max-width: 375px) {
-   :root { --porcent--change--color: 63%;}
-}*/
 @media screen and (max-width: 320px) {
    :root { --porcent--change--color: 98%;}
 }
 .bg-green { background-color: transparent; }
-/* #endregion BACKGROUNDS */
+
 
 
 
