@@ -931,42 +931,6 @@ p {
    }
 }
 
-
-:root {
-   --url--hamburger--1: url('../assets/hamburgers/Hamburger-part-1-dark-lg.webp');
-   --url--hamburger--2: url('../assets/hamburgers/Hamburger-part-2-lg.webp');
-   --url--hamburger--3: url('../assets/hamburgers/Hamburger-part-3-dark-lg.webp');
-   --url--hamburger--4: url('../assets/hamburgers/Hamburger-part-4-lg.webp');
-   --url--hamburger--5: url('../assets/hamburgers/Hamburger-part-5-dark-lg.webp');
-   --url--hamburger--6: url('../assets/hamburgers/Hamburger-part-6-lg.png');
-}
-#section_paralax_1 {background-image: var(--url--hamburger--1);}
-#section_paralax_2 {background-image: var(--url--hamburger--2);}
-#section_paralax_3 {background-image: var(--url--hamburger--3);}
-#section_paralax_4 {background-image: var(--url--hamburger--4);}
-#section_paralax_5 {background-image: var(--url--hamburger--5);}
-#section_paralax_6 {background-image: var(--url--hamburger--6);}
-@media screen and (max-width: 768px) {
-   :root {
-      --url--hamburger--1: url('../assets/hamburgers/Hamburger-part-1-dark-md.webp');
-      --url--hamburger--2: url('../assets/hamburgers/Hamburger-part-2-md.webp');
-      --url--hamburger--3: url('../assets/hamburgers/Hamburger-part-3-dark-md.webp');
-      --url--hamburger--4: url('../assets/hamburgers/Hamburger-part-4-md.webp');
-      --url--hamburger--5: url('../assets/hamburgers/Hamburger-part-5-dark-md.webp');
-      --url--hamburger--6: url('../assets/hamburgers/Hamburger-part-6-md.webp');
-   }
-}
-@media screen and (max-width: 380px) {
-   :root {
-      --url--hamburger--1: url('../assets/hamburgers/Hamburger-part-1-dark-sm.webp');
-      --url--hamburger--2: url('../assets/hamburgers/Hamburger-part-2-sm.webp');
-      --url--hamburger--3: url('../assets/hamburgers/Hamburger-part-3-dark-sm.webp');
-      --url--hamburger--4: url('../assets/hamburgers/Hamburger-part-4-sm.webp');
-      --url--hamburger--5: url('../assets/hamburgers/Hamburger-part-5-dark-sm.webp');
-      --url--hamburger--6: url('../assets/hamburgers/Hamburger-part-6-sm.webp');
-   }
-}
-
 :root {
    --top--parallax: 15vh;
    --height--parallax: 95vh;
@@ -980,6 +944,32 @@ p {
    justify-content: center
 
 }
+
+@media screen and (max-width: 768px ) {
+   :root { --top--parallax: 10vh; --height--parallax: 100vh; }
+}
+@media screen and (max-width: 376px ) {
+   :root { --top--parallax: 10vh; --height--parallax: 90vh; }
+}
+
+
+:root {
+   --font--size--p--parallax: 2vw;
+   --line--height--p--parallax: 3vw;
+}
+.section_parallax p{
+   font-size: var(--font--size--p--parallax);
+   line-height: var(--line--height--p--parallax);
+   width: 80%;
+}
+
+@media screen and (max-width: 768px ) {
+   :root { --font--size--p--parallax: 4vw; --line--height--p--parallax: 5vw; }
+}
+@media screen and (max-width: 376px ) {
+   :root { --font--size--p--parallax: 5vw; --line--height--p--parallax: 6vw; }
+}
+
 
 footer {
    align-items: flex-end;
