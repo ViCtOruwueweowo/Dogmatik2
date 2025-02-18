@@ -3,13 +3,9 @@
    padding: 0;
    margin: 0%;
    box-sizing: border-box;
-   /* font-weight: 900; */
 }
-
 :root {
    --text--size: 18px;
-   /* #region COLORS */
-
    --color--primary: #99D9D9;
    --color--secondary: #68A2B9;
    --color--light: #F2F0E9;
@@ -19,32 +15,16 @@
    --color--bg--dark: #001628;
    --color--green: #219F94;
    --color--red: #EB5353;
-
    --color--dark--transparent: #001628ea;
    --color--light: #F2F0E9;
    --color--bg--blue: #59A9B5;
    --color--bg--brown: #6E6C4F;
-
-
    --color--scroll: #68A2B9;
    --color--bg--scroll: #343A40;
-   /* --color--bg--scroll: #D6D8D9; */
-   /* #endregion COLORS */
-
-   /* #region SCREENS */
-   --screen--max--size--x-small: 576px; /* <576px */
-   --screen--max--size--small: 767px; /* >=576px */
-   --screen--max--size--medium: 991px; /* >=992px */
-   --screen--max--size--large: 1199px; /* >=1200px */
-   --screen--max--size--x-large: 1399px; /* >=1400px */
-
-
    font-family: 'Roboto', sans-serif;
-
    font-size: var(--text--size);
    line-height: 1.5rem;
    color: var(--color--dark);
-
    --porcent--change--color: 5%;
 
 }
@@ -56,26 +36,6 @@
    scrollbar-width: thin;
    scrollbar-color: var(--color--scroll) var(--color--bg--scroll);
  }
-
- /* Works on Chrome, Edge, and Safari */
- *::-webkit-scrollbar {
-   width: 10px;
- }
-
- *::-webkit-scrollbar-track {
-   background: var(--color--bg--scroll);
- }
-
- *::-webkit-scrollbar-thumb {
-   background-color: var(--color--scroll);
-   border-radius: 15px;
-   /* border: solid var(--color--scroll); */
- }
-
-.scroll-y-none {
-   overflow-y: hidden;
-}
-
 
 a {
    text-decoration: none;
