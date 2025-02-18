@@ -35,35 +35,42 @@
     <div
       class="container-full d-flex justify-content-center text-center bg-blue"
     >
-      <section class="h-100 p-0" id="section_hero">
-        <div class="h-100 w-100 bg-dark hero" id="intro_logo">
-        
-        </div>
-
-        <div class="p-relative d-flex justify-content-center" id="hero">
-          <img
-            src="assets/main-logo.webp"
-            alt="main-logo-royal"
-            class="img-hero"
-            id="img_hero_1"
-            width="300"
-            height="300"
-            loading="lazy"
-            sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
-          <img src="assets/arroba-clara.webp" alt="arroba"     loading="lazy" class="img-sm" />
-          <img
-            src="assets/logotipo.webp"
-            alt="logotipo-molly-burguers"
-            class="img-hero"
-            id="img_hero_2"
-            width="300"
-            loading="lazy"
-            height="300"
-            sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
-        </div>
-      </section>
+    <section class="h-100 p-0" id="section_hero">
+      <div class="h-100 w-100 bg-dark hero" id="intro_logo"></div>
+    
+      <div class="p-relative d-flex justify-content-center align-items-center" id="hero">
+        <img
+          src="assets/main-logo.webp"
+          srcset="assets/main-logo-small.webp 150w, assets/main-logo.webp 300w"
+          sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          alt="main-logo-royal"
+          class="img-hero"
+          id="img_hero_1"
+          width="300"
+          height="300"
+          loading="lazy"
+        />
+        <img 
+          src="assets/arroba-clara.webp" 
+          srcset="assets/arroba-clara-small.webp 100w, assets/arroba-clara.webp 200w"
+          alt="arroba"
+          loading="lazy"
+          class="img-sm"
+        />
+        <img
+          src="assets/logotipo.webp"
+          srcset="assets/logotipo-small.webp 150w, assets/logotipo.webp 300w"
+          sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          alt="logotipo-molly-burguers"
+          class="img-hero"
+          id="img_hero_2"
+          width="300"
+          height="300"
+          loading="lazy"
+        />
+      </div>
+    </section>
+    
 
       <hr
         class="separator"
