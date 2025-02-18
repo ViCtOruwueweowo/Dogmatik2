@@ -1,49 +1,54 @@
 AOS.init();
 
-const TIME_OUT = 3500;
-const TIME_INCREMENT = 300;
+let timeTimeOut = 3500; 
+let time = 300;
 
-const body = document.body;
-const introLogo = document.querySelector("#intro_logo");
-const hero = document.querySelector("#hero");
-const imgHero1 = document.querySelector("#img_hero_1");
-const imgHero2 = document.querySelector("#img_hero_2");
-const spanIcon = document.querySelector("#span_icon");
-const favicon = document.querySelector("#favicon");
-const imgHamburger = document.getElementById("img_hamburger_1");
+const elements = {
+  introLogo: document.querySelector("#intro_logo"),
+  hero: document.querySelector("#hero"),
+  imgHero1: document.querySelector("#img_hero_1"),
+  imgHero2: document.querySelector("#img_hero_2"),
+  spanIcon: document.querySelector("#span_icon"),
+  body: document.querySelector("body"),
+};
 
-// Funciones de animación
-const animation_1 = () => introLogo.classList.add("d-none");
+const animation_1 = () => elements.introLogo.classList.add("d-none");
 const animation_2 = () => {
-    hero.classList.add("fade_in");
-    imgHero1.classList.add("img_left_right");
-    imgHero2.classList.add("img_right_left");
+  elements.hero.classList.add("fade_in");
+  elements.imgHero1.classList.add("img_left_right");
+  elements.imgHero2.classList.add("img_right_left");
 };
 const animation_3 = () => {
-    spanIcon.classList.remove("d-none");
-    body.classList.remove("scroll-y-none");
+  elements.spanIcon.classList.remove("d-none");
+  elements.body.classList.remove("scroll-y-none");
 };
 
-// Efecto Parallax optimizado con requestAnimationFrame
-const updateParallax = () => {
-    const position = window.pageYOffset || document.documentElement.scrollTop;
-    imgHamburger.style.bottom = `${position * 0.01}px`;
-    requestAnimationFrame(updateParallax);
+//#region EFECTO PARALLAX
+const handleScroll = () => {
+  requestAnimationFrame(() => {
+    let position = window.scrollY || document.documentElement.scrollTop;
+    let imgHamburger1 = document.getElementById("img_hamburger_1");
+    let sectionHamburgers = document.getElementById("section_hamburgers");
+  });
 };
-requestAnimationFrame(updateParallax);
 
-// Detectar Dark Mode en el navegador
-favicon.href = window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? "assets/crown_logo_white.png"
-    : "assets/crown_logo.png";
+window.addEventListener('scroll', handleScroll);
+//#endregion EFECTO PARALLAX
 
-// Ejecutar animaciones al cargar la página
+//#region DETECTAR DARK-MODE EN EL NAVEGADOR
+const favicon = document.querySelector("#favicon");
+favicon.href = window.matchMedia('(prefers-color-scheme: dark)').matches ? "assets/crown_logo_white.webp" : "assets/crown_logo.webp";
+//#endregion DETECTAR DARK-MODE EN EL NAVEGADOR
+
 document.addEventListener("DOMContentLoaded", () => {
-    body.classList.add("scroll-y-none");
-    imgHero1.classList.remove("img_left_right");
-    imgHero2.classList.remove("img_right_left");
+  elements.body.classList.add("scroll-y-none");
+  elements.imgHero1.classList.remove("img_left_right");
+  elements.imgHero2.classList.remove("img_right_left");
 
-    setTimeout(animation_1, TIME_OUT);
-    setTimeout(animation_2, TIME_OUT + TIME_INCREMENT);
-    setTimeout(animation_3, TIME_OUT + TIME_INCREMENT + 2000);
+  const animations = () => {
+    setTimeout(animation_1, timeTimeOut);
+    setTimeout(animation_2, timeTimeOut += time);
+    setTimeout(animation_3, timeTimeOut += time + 2500);
+  };
+  animations();
 });
