@@ -698,7 +698,7 @@ p {
    30% { opacity: .25; transform: scale(.9); }
    45% { opacity: .6; transform: scale(1); }
    60% { opacity: .55; transform: scale(.9); }
-   75% { opacity: .9; transform: scale(1); }
+   75%, 90% { opacity: .9; transform: scale(1); }
    100% { opacity: 0; }
 }
 
@@ -746,52 +746,50 @@ p {
    transform: translate(5%, 0%);
 }
 
-/* Animaciones optimizadas */
 .img_rotate_right {
    animation: rotate_right 2.5s ease-in-out forwards;
-}
-
-@keyframes rotate_right {
-   from { transform: rotate(0deg) translate(0); }
-   to { transform: rotate(1170deg) translate(-15rem); }
 }
 
 .img_rotate_left {
    animation: rotate_left 2.5s ease-in-out forwards;
 }
 
-@keyframes rotate_left {
-   from { transform: rotate(0deg) translate(0); }
-   to { transform: rotate(1170deg) translate(15rem); }
-}
-
 .img_left_right {
-   animation: left_right 2.5s cubic-bezier(0.77, -0.16, 0.5, 1.25) forwards;
-}
-
-@keyframes left_right {
-   from { transform: translateX(-65vw) rotate(0deg); }
-   to { transform: translateX(0) rotate(360deg); }
+   animation: left_right 2.5s cubic-bezier(0.77,-0.16,0.5,1.25) forwards;
 }
 
 .img_right_left {
-   animation: right_left 2.5s cubic-bezier(0.77, -0.16, 0.5, 1.25) forwards;
+   animation: right_left 2.5s cubic-bezier(0.77,-0.16,0.5,1.25) forwards;
+}
+
+/* Animaciones de rotación optimizadas */
+@keyframes rotate_right {
+   from { transform: rotate(0) translate(0); }
+   to { transform: rotate(1170deg) translate(-15rem); }
+}
+
+@keyframes rotate_left {
+   from { transform: rotate(0) translate(0); }
+   to { transform: rotate(1170deg) translate(15rem); }
+}
+
+@keyframes left_right {
+   from { transform: translateX(-65vw) rotate(0); }
+   to { transform: translateX(0) rotate(360deg); }
 }
 
 @keyframes right_left {
-   from { transform: translateX(65vw) rotate(0deg); }
+   from { transform: translateX(65vw) rotate(0); }
    to { transform: translateX(0) rotate(-360deg); }
 }
 
-/* Media query única para reducir código duplicado */
+/* Media query única para reducir código repetido */
 @media screen and (max-width: 768px) {
    @keyframes rotate_right {
-      from { transform: rotate(0deg) translate(0); }
       to { transform: rotate(1170deg) translate(-12rem); }
    }
 
    @keyframes rotate_left {
-      from { transform: rotate(0deg) translate(0); }
       to { transform: rotate(1170deg) translate(12rem); }
    }
 }
