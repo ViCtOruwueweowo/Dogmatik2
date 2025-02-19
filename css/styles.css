@@ -706,7 +706,7 @@ p {
    100% { opacity: 0; display: none;}
 }
 #intro_logo {
-   animation: fade_out_intro_logo 3s ease-out;
+   animation: fade_out_intro_logo 1s ease-out;
 }
 @keyframes fade_out_intro_logo {
    0% { opacity: 1; }
@@ -724,7 +724,7 @@ p {
    width: 100vw;
    height: 100vh;
    opacity: 0;
-   transition: opacity 2s ease-in-out;
+   transition: opacity 1s ease-in-out;
 }
 #hero.fade_in {opacity: 1;}
 
@@ -739,14 +739,14 @@ p {
    transform: translate(5%, 0%);
 }
 .img_rotate_right {
-   animation: rotate_right 2.5s ease-in-out forwards;
+   animation: rotate_right 1.5s ease-in-out forwards;
 }
 @keyframes rotate_right {
    from { transform: rotate(0deg)  translate(-0rem) rotate(0deg); }
    to { transform: rotate(1170deg) translate(-15rem) rotate(-3690deg); }
 }
 .img_left_right {
-   animation: left_right 2.5s cubic-bezier(0.77,-0.16, 0.5, 1.25) forwards;
+   animation: left_right 1.5s cubic-bezier(0.77,-0.16, 0.5, 1.25) forwards;
 }
 @keyframes left_right {
    from { transform: translateX(-65vw) rotate(0deg); }
@@ -925,11 +925,11 @@ p {
 }
 
 :root {
-   --url--hamburger--1: url('../assets/hamburgers/Hamburger-part-1-dark-lg.png');
-   --url--hamburger--2: url('../assets/hamburgers/Hamburger-part-2-lg.png');
-   --url--hamburger--3: url('../assets/hamburgers/Hamburger-part-3-dark-lg.png');
-   --url--hamburger--4: url('../assets/hamburgers/Hamburger-part-4-lg.png');
-   --url--hamburger--5: url('../assets/hamburgers/Hamburger-part-5-dark-lg.png');
+   --url--hamburger--1: url('../assets/hamburgers/Hamburger-part-1-dark-lg.webp');
+   --url--hamburger--2: url('../assets/hamburgers/Hamburger-part-2-lg.webp');
+   --url--hamburger--3: url('../assets/hamburgers/Hamburger-part-3-dark-lg.webp');
+   --url--hamburger--4: url('../assets/hamburgers/Hamburger-part-4-lg.webp');
+   --url--hamburger--5: url('../assets/hamburgers/Hamburger-part-5-dark-lg.webp');
    --url--hamburger--6: url('../assets/hamburgers/Hamburger-part-6-lg.png');
 }
 #section_paralax_1 {background-image: var(--url--hamburger--1);}
@@ -940,22 +940,22 @@ p {
 #section_paralax_6 {background-image: var(--url--hamburger--6);}
 @media screen and (max-width: 768px) {
    :root {
-      --url--hamburger--1: url('../assets/hamburgers/Hamburger-part-1-dark-md.png');
-      --url--hamburger--2: url('../assets/hamburgers/Hamburger-part-2-md.png');
-      --url--hamburger--3: url('../assets/hamburgers/Hamburger-part-3-dark-md.png');
-      --url--hamburger--4: url('../assets/hamburgers/Hamburger-part-4-md.png');
-      --url--hamburger--5: url('../assets/hamburgers/Hamburger-part-5-dark-md.png');
-      --url--hamburger--6: url('../assets/hamburgers/Hamburger-part-6-md.png');
+      --url--hamburger--1: url('../assets/hamburgers/Hamburger-part-1-dark-md.webp');
+      --url--hamburger--2: url('../assets/hamburgers/Hamburger-part-2-md.webp');
+      --url--hamburger--3: url('../assets/hamburgers/Hamburger-part-3-dark-md.webp');
+      --url--hamburger--4: url('../assets/hamburgers/Hamburger-part-4-md.webp');
+      --url--hamburger--5: url('../assets/hamburgers/Hamburger-part-5-dark-md.webp');
+      --url--hamburger--6: url('../assets/hamburgers/Hamburger-part-6-md.webp');
    }
 }
 @media screen and (max-width: 380px) {
    :root {
-      --url--hamburger--1: url('../assets/hamburgers/Hamburger-part-1-dark-sm.png');
-      --url--hamburger--2: url('../assets/hamburgers/Hamburger-part-2-sm.png');
-      --url--hamburger--3: url('../assets/hamburgers/Hamburger-part-3-dark-sm.png');
-      --url--hamburger--4: url('../assets/hamburgers/Hamburger-part-4-sm.png');
-      --url--hamburger--5: url('../assets/hamburgers/Hamburger-part-5-dark-sm.png');
-      --url--hamburger--6: url('../assets/hamburgers/Hamburger-part-6-sm.png');
+      --url--hamburger--1: url('../assets/hamburgers/Hamburger-part-1-dark-sm.webp');
+      --url--hamburger--2: url('../assets/hamburgers/Hamburger-part-2-sm.webp');
+      --url--hamburger--3: url('../assets/hamburgers/Hamburger-part-3-dark-sm.webp');
+      --url--hamburger--4: url('../assets/hamburgers/Hamburger-part-4-sm.webp');
+      --url--hamburger--5: url('../assets/hamburgers/Hamburger-part-5-dark-sm.webp');
+      --url--hamburger--6: url('../assets/hamburgers/Hamburger-part-6-sm.webp');
    }
 }
 
