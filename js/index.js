@@ -26,21 +26,39 @@ const animations = [
   }
 ];
 
+// Función de animación optimizada con requestAnimationFrame
 document.addEventListener("DOMContentLoaded", () => {
   elements.body.classList.add("scroll-y-none");
   elements.imgHero1.classList.remove("img_left_right");
   elements.imgHero2.classList.remove("img_right_left");
 
   let delay = TIMEOUT_INITIAL;
-  animations.forEach(animation => {
-    setTimeout(animation, delay);
-    delay += TIME_INCREMENT;
-  });
-  setTimeout(animations[2], delay + TIME_ANIMATION_3);
+
+  // Usamos requestAnimationFrame para encadenar las animaciones con retraso
+  const animate = () => {
+    let animationIndex = 0;
+
+    const runAnimations = () => {
+      if (animationIndex < animations.length) {
+        setTimeout(() => {
+          animations[animationIndex]();
+          animationIndex++;
+          requestAnimationFrame(runAnimations);
+        }, delay);
+        delay += TIME_INCREMENT;
+      }
+    };
+
+    runAnimations();
+    setTimeout(animations[2], delay + TIME_ANIMATION_3);
+  };
+
+  animate();
 });
 
 //#region EFECTO PARALLAX
 const handleScroll = () => {
+  // Usamos requestAnimationFrame para optimizar el rendimiento en desplazamiento
   requestAnimationFrame(() => {
     const position = window.scrollY || document.documentElement.scrollTop;
     // Aquí puedes añadir efectos si es necesario sin afectar el rendimiento
@@ -52,6 +70,7 @@ window.addEventListener("scroll", handleScroll, { passive: true });
 
 //#region DETECTAR DARK-MODE EN EL NAVEGADOR
 const favicon = document.getElementById("favicon");
+
 const updateFavicon = e => {
   favicon.href = e.matches ? "assets/crown_logo_white.webp" : "assets/crown_logo.webp";
 };
